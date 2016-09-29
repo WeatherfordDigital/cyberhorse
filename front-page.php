@@ -76,7 +76,8 @@ function showcase_front_page_widgets() {
 	) );
 
 	genesis_widget_area( 'front-page-3', array(
-		'before' => '<div id="front-page-3" class="front-page-3 bg-primary flexible-widget-area"><div class="wrap"><div class="flexible-widgets widget-area' . showcase_widget_area_class( 'front-page-3' ) . '">',
+
+		'before' => '<div id="front-page-3" class="front-page-3 flexible-widget-area"><div class="wrap"><div class="flexible-widgets widget-area' . showcase_widget_area_class( 'front-page-3' ) . '">',
 		'after'  => '</div></div></div>',
 	) );
 

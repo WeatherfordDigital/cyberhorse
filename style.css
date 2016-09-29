@@ -1145,7 +1145,7 @@ img.stretch {
 	width: 100%;
 	z-index: 999;
 	padding: 20px 0;
-	background: #52c0cb;
+	background: #ffffff;
 	position: relative;
 }
 
@@ -1183,18 +1183,20 @@ img.stretch {
 	background-position: center center !important;
 	background-size: contain !important;
 	float: left;
-	min-height: 75px;
-	width: 200px;
+	min-height: 126px;
+	width: 216px;
 }
 
 .header-image .title-area {
 	margin: 0;
-	width: 200px;
+	width: 250px;
 }
 
 .site-description {
 	display: none;
 }
+
+
 
 @media only screen and (min-width: 800px) {
 
@@ -1203,7 +1205,7 @@ img.stretch {
 	}
 
 	.site-header .wrap {
-		max-width: none;
+		/*max-width: none;*/
 	}
 
 	.bg-primary .site-header {
@@ -1237,7 +1239,7 @@ img.stretch {
 	display: block;
 	margin: 0 16px 0;
 	position: relative;
-	color: #fff;
+	color: #000;
 	opacity: .7;
 }
 
@@ -2317,4 +2319,89 @@ p.comment-form-comment {
 
 .site-footer p {
 	margin-bottom: 0;
+}
+
+.front-page-3 {
+	background: #52c0cb;
+}
+
+.site-header {
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition:    all 0.4s ease-in-out;
+	-ms-transition:     all 0.4s ease-in-out;
+	-o-transition:      all 0.4s ease-in-out;
+	transition:         all 0.4s ease-in-out;
+}
+
+@media only screen and (min-width: 800px) {
+
+	.nav-primary {
+		text-align: justify;
+	}
+
+}
+
+@media only screen and (min-width: 801px) {
+
+	.bg-primary .site-header {
+		padding: 30px 5% 0 5%;
+	}
+
+	.site-header > .wrap {
+		border-bottom: 1px solid rgba(255,255,255,0.3);
+		padding: 0;
+	}
+
+	.nav-primary {
+		float: right;
+	}
+
+	.bg-primary .nav-primary {
+		border-bottom: none;
+	}
+
+	.site-header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	.admin-bar .site-header {
+		/*top: 32px;*/
+	}
+
+	.page-header {
+		padding: 17% 0 10% 0;
+	}
+
+	.bg-primary .site-header.scrolled {
+		background-color: #52c0cb;
+		padding-top: 10px;
+	}
+
+	.bg-primary .site-header.scrolled .nav-primary {
+		padding-bottom: 0;
+	}
+
+}
+
+div#front-page-hero {
+	margin-top: 126px;
+}
+
+/* Custom CSS
+ * ========================================================================== */
+
+.site-header .widget-area {
+    float: right;
+    text-align: right;
+    width: 900px;
+}
+
+@media only screen and (max-width: 800px) {
+    .site-header .widget-area {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
 }

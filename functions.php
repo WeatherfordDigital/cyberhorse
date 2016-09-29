@@ -107,30 +107,30 @@ add_image_size( 'showcase_hero', 1920, 960, TRUE );
  * ========================================================================== */
 
 //* Rename primary and secondary navigation menus
-add_theme_support ( 'genesis-menus' , array ( 'primary' => __( 'Header Menu', 'showcase' ), 'secondary' => __( 'Page Header Menu', 'showcase' ) ) );
-
-//* Reposition primary navigation menu
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
-add_action( 'genesis_header', 'genesis_do_nav', 12 );
+//add_theme_support ( 'genesis-menus' , array ( 'primary' => __( 'Header Menu', 'showcase' ), 'secondary' => __( 'Page Header Menu', 'showcase' ) ) );
+//
+////* Reposition primary navigation menu
+//remove_action( 'genesis_after_header', 'genesis_do_nav' );
+//add_action( 'genesis_header', 'genesis_do_nav', 12 );
 
 //* Remove output of primary navigation right extras
-remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
-remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
+//remove_filter( 'genesis_nav_items', 'genesis_nav_right', 10, 2 );
+//remove_filter( 'wp_nav_menu_items', 'genesis_nav_right', 10, 2 );
 
 //* Remove secondary navigation menu, it's added back in the /lib/page-header.php
 remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 
 //* Reduce secondary navigation menu to one level depth
-add_filter( 'wp_nav_menu_args', 'showcase_secondary_menu_args' );
-function showcase_secondary_menu_args( $args ){
-
-	if( 'secondary' != $args['theme_location'] )
-	return $args;
-
-	$args['depth'] = 1;
-	return $args;
-
-}
+//add_filter( 'wp_nav_menu_args', 'showcase_secondary_menu_args' );
+//function showcase_secondary_menu_args( $args ){
+//
+//	if( 'secondary' != $args['theme_location'] )
+//	return $args;
+//
+//	$args['depth'] = 1;
+//	return $args;
+//
+//}
 
 //* Remove navigation meta box
 add_action( 'genesis_theme_settings_metaboxes', 'showcase_remove_genesis_metaboxes' );
@@ -151,7 +151,7 @@ add_theme_support( 'genesis-after-entry-widget-area' );
 add_filter('widget_text', 'do_shortcode');
 
 //* Remove header right widget area
-unregister_sidebar( 'header-right' );
+//unregister_sidebar( 'header-right' );
 
 //* Remove secondary sidebar
 unregister_sidebar( 'sidebar-alt' );
@@ -337,3 +337,23 @@ add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
 function showcase_bar_to_br( $content ) {
 	return str_replace( ' | ', '<br class="mobile-hide">', $content );
 }
+
+
+
+
+
+
+/*********** CUSTOM FOOTER ***************/
+
+//* Customize the credits
+add_filter( 'genesis_footer_creds_text', 'sp_footer_creds_text' );
+function sp_footer_creds_text() {
+	echo '<p>';
+	echo 'Copyright &copy; ';
+	echo date('Y');
+	echo ' &middot; <a href="http://cyberhorseconstruction.com">Cyber Horse Construction</a>';
+	echo ' &middot; Powered By:  <a href="http://synergy.bz" title="Synergy Elements" target="_blank">Synergy Elements</a>';
+	echo '</p></div>';
+}
+
+/*********** END CUSTOM FOOTER **********/

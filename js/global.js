@@ -37,4 +37,20 @@ jQuery( function ( $ ) {
 
 	});
 
+	function addScrolled() {
+
+		if(window.innerWidth > 800) {
+			if ( $( document ).scrollTop() > 0 ){
+				$( '.site-header' ).addClass( 'scrolled' );
+			} else {
+				$( '.site-header' ).removeClass( 'scrolled' );
+			}
+		}
+
+	};
+
+	$( document ).on('scroll', addScrolled);
+
+	$( window ).on('resize', addScrolled);
+
 });
