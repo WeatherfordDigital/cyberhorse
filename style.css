@@ -136,6 +136,7 @@ h3,
 h4,
 h5,
 h6 {
+    color: #461317;
 	margin: 0 0 0.612em;
 	line-height: 1.2;
 	letter-spacing: -0.02em;
@@ -434,11 +435,12 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .button {
-	background-color: #e6413e;
+	background-color: transparent !important;
 	border-radius: 4px;
+    border: 1px solid  #461317 !important;
 	box-shadow: none;
 	border: 0;
-	color: #fff;
+	color: #461317;
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 600;
@@ -591,7 +593,7 @@ input[type="search"]::-webkit-search-results-button {
 }
 
 .gallery img {
-	border: 1px solid #ddd;
+	/*border: 1px solid #ddd;*/
 	height: auto;
 	padding: 4px;
 }
@@ -2386,7 +2388,7 @@ p.comment-form-comment {
 }
 
 div#front-page-hero {
-	margin-top: 126px;
+	margin-top: 155px;
 }
 
 /* Custom CSS
@@ -2396,6 +2398,49 @@ div#front-page-hero {
     float: right;
     text-align: right;
     width: 900px;
+}
+
+.soliloquy-caption {
+    width: 70% !important;
+    left: 350px !important;
+    top: 30% !important;
+}
+.soliloquy-caption h1 {
+    font-size:65px;
+    font-style: normal;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.soliloquy-caption .button {
+    font-size:16px;
+    font-style: normal;
+    font-weight: bold;
+    padding: 20px;
+}
+
+.soliloquy-container.soliloquy-theme-karisma .soliloquy-caption-inside a, .soliloquy-container.soliloquy-theme-karisma .soliloquy-caption-inside .soliloquy-fc-title-link, .soliloquy-container.soliloquy-theme-karisma .soliloquy-caption-inside .soliloquy-fc-read-more {
+    color: #461317 !important;
+    padding: 11px;
+}
+
+.soliloquy-container .soliloquy-caption .soliloquy-caption-inside {
+    text-align: left !important;
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.7) !important;
+    color: #555 !important;
+}
+
+.soliloquy-container .soliloquy {
+    margin: 0 0 0 -100px !important;
+    padding: 0 !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
+.soliloquy-container .soliloquy-caption h2 {
+    color: #006600 !important;
 }
 
 @media only screen and (max-width: 800px) {
